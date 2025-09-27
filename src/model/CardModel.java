@@ -30,8 +30,8 @@ public class CardModel {
 		this.eOrientationCurrent = eOrientation;
 	}
 
-	public void addEAttributes(EAttribute... eAttributes) {
-		this.eAttributes.addAllLast(eAttributes);
+	public ArrayList<EAttribute> getEAttributes() {
+		return this.eAttributes;
 	}
 
 }
