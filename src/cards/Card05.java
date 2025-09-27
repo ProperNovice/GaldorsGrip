@@ -4,12 +4,11 @@ import enums.EAttribute;
 import model.CardCredentials;
 import utils.ArrayList;
 
-public class Card01 extends Card {
+public class Card05 extends Card {
 
 	@Override
 	protected void addEAttribues(ArrayList<EAttribute> eAttributes) {
 
-		eAttributes.addLast(EAttribute.STAR);
 		eAttributes.addLast(EAttribute.GRIP);
 		eAttributes.addLast(EAttribute.PUZZLE_PIECE);
 
@@ -18,14 +17,14 @@ public class Card01 extends Card {
 	@Override
 	protected void setCardCredentialsEOrientationNormal(CardCredentials cardCredentials) {
 
-		cardCredentials.setValue(1);
+		cardCredentials.setValueIsWildcard();
 
 	}
 
 	@Override
 	protected void setCardCredentialsEOrientationUpsideDown(CardCredentials cardCredentials) {
 
-		cardCredentials.setValue(6);
+		cardCredentials.setValue(1);
 
 	}
 

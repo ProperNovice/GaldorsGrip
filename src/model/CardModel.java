@@ -4,6 +4,7 @@ import enums.EAttribute;
 import enums.EOrientation;
 import utils.ArrayList;
 import utils.HashMap;
+import utils.Logger;
 
 public class CardModel {
 
@@ -15,6 +16,23 @@ public class CardModel {
 
 		this.cardCredentials.put(EOrientation.NORMAL, new CardCredentials());
 		this.cardCredentials.put(EOrientation.UPSIDE_DOWN, new CardCredentials());
+
+	}
+
+	public void print() {
+
+		Logger.INSTANCE.log("attributes");
+
+		for (EAttribute eAttribute : this.eAttributes)
+			Logger.INSTANCE.log(eAttribute);
+
+		Logger.INSTANCE.newLine();
+
+		Logger.INSTANCE.log("orientation normal");
+		this.cardCredentials.getValue(EOrientation.NORMAL).print();
+
+		Logger.INSTANCE.log("orientation upside down");
+		this.cardCredentials.getValue(EOrientation.UPSIDE_DOWN).print();
 
 	}
 

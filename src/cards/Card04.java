@@ -4,7 +4,7 @@ import enums.EAttribute;
 import model.CardCredentials;
 import utils.ArrayList;
 
-public class Card01 extends Card {
+public class Card04 extends Card {
 
 	@Override
 	protected void addEAttribues(ArrayList<EAttribute> eAttributes) {
@@ -18,14 +18,14 @@ public class Card01 extends Card {
 	@Override
 	protected void setCardCredentialsEOrientationNormal(CardCredentials cardCredentials) {
 
-		cardCredentials.setValue(1);
+		cardCredentials.setValue(4);
 
 	}
 
 	@Override
 	protected void setCardCredentialsEOrientationUpsideDown(CardCredentials cardCredentials) {
 
-		cardCredentials.setValue(6);
+		cardCredentials.setValue(3);
 
 	}
 

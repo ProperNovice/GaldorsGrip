@@ -4,13 +4,13 @@ import enums.EAttribute;
 import model.CardCredentials;
 import utils.ArrayList;
 
-public class Card01 extends Card {
+public class Card12 extends Card {
 
 	@Override
 	protected void addEAttribues(ArrayList<EAttribute> eAttributes) {
 
-		eAttributes.addLast(EAttribute.STAR);
-		eAttributes.addLast(EAttribute.GRIP);
+		eAttributes.addLast(EAttribute.BOOK_AND_PENCIL);
+		eAttributes.addLast(EAttribute.SKULL);
 		eAttributes.addLast(EAttribute.PUZZLE_PIECE);
 
 	}

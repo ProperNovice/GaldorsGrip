@@ -7,6 +7,7 @@ import model.CardModel;
 import utils.ArrayList;
 import utils.ImageView;
 import utils.Interfaces.IImageViewAble;
+import utils.Logger;
 
 public abstract class Card implements IImageViewAble {
 
@@ -14,9 +15,9 @@ public abstract class Card implements IImageViewAble {
 
 	public Card() {
 
-		this.cardModel = new CardModel();
-
 		createImageView();
+
+		this.cardModel = new CardModel();
 
 		addEAttribues(this.cardModel.getEAttributes());
 
@@ -47,9 +48,18 @@ public abstract class Card implements IImageViewAble {
 
 		new ImageView(filePath, this);
 
+		getImageView().setBack("cards/back.png");
+
 	}
 
 	public final void print() {
+
+		Logger.INSTANCE.logNewLine("/*");
+		Logger.INSTANCE.logNewLine("printing card");
+
+		this.cardModel.print();
+
+		Logger.INSTANCE.logNewLine("*/");
 
 	}
 

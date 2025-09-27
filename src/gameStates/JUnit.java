@@ -1,14 +1,15 @@
 package gameStates;
 
-import cards.Card01;
+import cards.*;
 import gameStatesDefault.GameState;
 
 public class JUnit extends GameState {
 
 	@Override
 	public void execute() {
-		
-		new Card01();
+
+		Card card = new Card17();
+		card.print();
 
 	}
 

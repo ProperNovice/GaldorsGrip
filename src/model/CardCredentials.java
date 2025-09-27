@@ -1,11 +1,33 @@
 package model;
 
+import utils.Logger;
+
 public class CardCredentials {
 
-	private int value = -1;
-	private boolean hasValue = true, valueIsStar = false;
+	private int value = -1, stars = 0;
+	private boolean hasValue = true, valueIsWildcard = false;
 
 	public CardCredentials() {
+
+	}
+
+	public void print() {
+
+		String value = "";
+
+		if (this.hasValue && !this.valueIsWildcard)
+			value += this.value;
+		else if (this.hasValue && this.valueIsWildcard)
+			value += "wildcard";
+		else
+			value += "null";
+
+		Logger.INSTANCE.log("value -> " + value);
+
+		if (this.stars > 0)
+			Logger.INSTANCE.log("stars -> " + this.stars);
+
+		Logger.INSTANCE.newLine();
 
 	}
 
@@ -17,12 +39,20 @@ public class CardCredentials {
 		this.hasValue = false;
 	}
 
-	public void setValueIsStar() {
-		this.valueIsStar = true;
+	public void setValueIsWildcard() {
+		this.valueIsWildcard = true;
+	}
+
+	public void setStars(int stars) {
+		this.stars = stars;
+	}
+
+	public int getStars() {
+		return this.stars;
 	}
 
 	public boolean valueIsStar() {
-		return this.valueIsStar;
+		return this.valueIsWildcard;
 	}
 
 	public boolean hasValue() {
