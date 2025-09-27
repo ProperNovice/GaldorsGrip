@@ -19,6 +19,7 @@ public class Card12 extends Card {
 	protected void setCardCredentialsEOrientationNormal(CardCredentials cardCredentials) {
 
 		cardCredentials.setValue(1);
+		cardCredentials.setHasRotateSymbol();
 
 	}
 
@@ -26,6 +27,7 @@ public class Card12 extends Card {
 	protected void setCardCredentialsEOrientationUpsideDown(CardCredentials cardCredentials) {
 
 		cardCredentials.setValue(6);
+		cardCredentials.setHasRotateSymbol();
 
 	}
 

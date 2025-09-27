@@ -1,5 +1,6 @@
 package cards;
 
+import controller.Credentials;
 import enums.EAttribute;
 import enums.EOrientation;
 import model.CardCredentials;
@@ -49,6 +50,7 @@ public abstract class Card implements IImageViewAble {
 		new ImageView(filePath, this);
 
 		getImageView().setBack("cards/back.png");
+		getImageView().setDimensions(Credentials.INSTANCE.dCard);
 
 	}
 

@@ -5,7 +5,7 @@ import utils.Logger;
 public class CardCredentials {
 
 	private int value = -1, stars = 0;
-	private boolean hasValue = true, valueIsWildcard = false;
+	private boolean hasValue = true, valueIsWildcard = false, hasRotateSymbol = false;
 
 	public CardCredentials() {
 
@@ -27,6 +27,9 @@ public class CardCredentials {
 		if (this.stars > 0)
 			Logger.INSTANCE.log("stars -> " + this.stars);
 
+		if (this.hasRotateSymbol)
+			Logger.INSTANCE.log("has rotate symbol");
+
 		Logger.INSTANCE.newLine();
 
 	}
@@ -45,6 +48,14 @@ public class CardCredentials {
 
 	public void setStars(int stars) {
 		this.stars = stars;
+	}
+
+	public void setHasRotateSymbol() {
+		this.hasRotateSymbol = true;
+	}
+
+	public boolean hasRotateSymbol() {
+		return this.hasRotateSymbol;
 	}
 
 	public int getStars() {

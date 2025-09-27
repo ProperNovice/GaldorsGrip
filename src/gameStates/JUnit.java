@@ -8,7 +8,7 @@ public class JUnit extends GameState {
 	@Override
 	public void execute() {
 
-		Card card = new Card17();
+		Card card = new Card06();
 		card.print();
 
 	}

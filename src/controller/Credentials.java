@@ -17,7 +17,26 @@ public enum Credentials {
 	public RearrangeTypeEnum rearrangeTypeEnumText = RearrangeTypeEnum.LINEAR;
 	public boolean primaryStageFullScreen = false;
 
+	public Vector2 dCard;
+
 	private Credentials() {
+
+		setDefault();
+
+		double x = 0, y = 0;
+
+		// d card
+
+		x = this.dFrame.x;
+		x -= 2 * this.gapBetweenBorders;
+		x -= 5 * this.dGapBetweenComponents.x;
+		x /= 6;
+		y = 750 * x / 550;
+		this.dCard = new Vector2(x, y);
+
+	}
+
+	private void setDefault() {
 
 		double x = 0, y = 0;
 
